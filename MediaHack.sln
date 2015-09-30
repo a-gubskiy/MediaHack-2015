@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaHack.Core", "MediaHack.Core\MediaHack.Core.csproj", "{A3F36BD3-DE41-497E-8A3E-4F7D18319C51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaHack.Uploader", "MediaHack.Uploader\MediaHack.Uploader.csproj", "{7CF63D0F-5415-42FA-AF5C-B1D5CF9D47A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaHack.WebApp", "MediaHack.WebApp\MediaHack.WebApp.csproj", "{88FE0E82-6CFF-430C-A8CA-EFB445FBA521}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3F36BD3-DE41-497E-8A3E-4F7D18319C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F36BD3-DE41-497E-8A3E-4F7D18319C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F36BD3-DE41-497E-8A3E-4F7D18319C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F36BD3-DE41-497E-8A3E-4F7D18319C51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CF63D0F-5415-42FA-AF5C-B1D5CF9D47A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CF63D0F-5415-42FA-AF5C-B1D5CF9D47A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CF63D0F-5415-42FA-AF5C-B1D5CF9D47A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CF63D0F-5415-42FA-AF5C-B1D5CF9D47A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88FE0E82-6CFF-430C-A8CA-EFB445FBA521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88FE0E82-6CFF-430C-A8CA-EFB445FBA521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88FE0E82-6CFF-430C-A8CA-EFB445FBA521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88FE0E82-6CFF-430C-A8CA-EFB445FBA521}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
