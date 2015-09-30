@@ -1,0 +1,14 @@
+﻿@model IEnumerable<MediaHack.Core.Video>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Videos</h2>
+
+<ul>
+    @foreach (var video in Model)
+    {
+        <li><a href="/video/@video.Name">@video.Title</a></li>
+    }
+</ul>

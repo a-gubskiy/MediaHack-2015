@@ -32,13 +32,14 @@
             this.lstVideos = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.btnUpload = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtPath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnOpenVideo = new System.Windows.Forms.Button();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +81,16 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Upload";
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(41, 49);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(426, 11);
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar.TabIndex = 4;
+            this.progressBar.Value = 50;
+            this.progressBar.Visible = false;
             // 
             // btnUpload
             // 
@@ -124,7 +135,7 @@
             // btnOpenVideo
             // 
             this.btnOpenVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOpenVideo.Location = new System.Drawing.Point(572, 394);
+            this.btnOpenVideo.Location = new System.Drawing.Point(566, 394);
             this.btnOpenVideo.Name = "btnOpenVideo";
             this.btnOpenVideo.Size = new System.Drawing.Size(75, 23);
             this.btnOpenVideo.TabIndex = 3;
@@ -132,24 +143,32 @@
             this.btnOpenVideo.UseVisualStyleBackColor = true;
             this.btnOpenVideo.Click += new System.EventHandler(this.OpenVideoOnWebApp);
             // 
-            // progressBar
+            // openFileDialog
             // 
-            this.progressBar.Location = new System.Drawing.Point(41, 49);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(426, 11);
-            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar.TabIndex = 4;
-            this.progressBar.Value = 50;
+            this.openFileDialog.Filter = "MP4 Files (*.mp4)|*.mp4";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.Location = new System.Drawing.Point(485, 394);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.TabIndex = 4;
+            this.btnRefresh.Text = "Refresh List";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 517);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnOpenVideo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lstVideos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "MediaHack Video Uploader";
             this.groupBox1.ResumeLayout(false);
@@ -171,6 +190,7 @@
         private System.Windows.Forms.Button btnOpenVideo;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
 
