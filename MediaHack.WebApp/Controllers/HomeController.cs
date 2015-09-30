@@ -1,4 +1,5 @@
-﻿using MediaHack.Core;
+﻿using System.Configuration;
+using MediaHack.Core;
 using System.Web.Mvc;
 
 namespace MediaHack.WebApp.Controllers
@@ -9,7 +10,16 @@ namespace MediaHack.WebApp.Controllers
 
         public HomeController()
         {
-            _cloud = new Cloud(@"d:\config.json");
+            var config = new CloudConfig
+            {
+                StorageServiceAccountName = ConfigurationSettings.AppSettings["StorageServiceAccountName"],
+                StorageServiceAccessKey = ConfigurationSettings.AppSettings["StorageServiceAccessKey"],
+                CdnEndpointName = ConfigurationSettings.AppSettings["CdnEndpointName"]
+            };
+
+            _cloud = new Cloud(config);
+
+            //_cloud = new Cloud(@"d:\config.json");
         }
 
         public ActionResult Index()

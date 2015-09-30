@@ -21,6 +21,11 @@ namespace MediaHack.Core
             _config = JsonConvert.DeserializeObject<CloudConfig>(json);
         }
 
+        public Cloud(CloudConfig config)
+        {
+            _config = config;
+        }
+
         public Video GetVideos(string name)
         {
             var container = GetBlobContainer();
