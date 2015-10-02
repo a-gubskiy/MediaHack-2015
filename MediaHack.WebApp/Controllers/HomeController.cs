@@ -6,7 +6,7 @@ namespace MediaHack.WebApp.Controllers
 {
     public class HomeController : Controller
     {
-        private Cloud _cloud;
+        private readonly Cloud _cloud;
 
         public HomeController()
         {
@@ -17,9 +17,14 @@ namespace MediaHack.WebApp.Controllers
                 CdnEndpointName = ConfigurationSettings.AppSettings["CdnEndpointName"]
             };
 
-            _cloud = new Cloud(config);
-
-            //_cloud = new Cloud(@"d:\config.json");
+            if (config.IsEmpty)
+            {
+                _cloud = new Cloud(@"d:\config.json");
+            }
+            else
+            {
+                _cloud = new Cloud(config);
+            }
         }
 
         public ActionResult Index()

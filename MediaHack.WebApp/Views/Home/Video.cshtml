@@ -1,4 +1,4 @@
-﻿@model MediaHack.Core.Video
+@model MediaHack.Core.Video
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,14 +7,25 @@
 <h2>@Model.Title</h2>
 
 
+
 <ul class="nav nav-tabs">
     <li><a data-toggle="tab" href="#menu1">Stream from Blob Storage</a></li>
     <li><a data-toggle="tab" href="#menu2">Stream from Blob CDN</a></li>
 </ul>
 
+
+<!--
+<video width="100%" controls>
+    <source src="@Model.ContentDeliveryNetworkUrl" type="video/mp4">
+    Your browser does not support HTML5 video.
+</video>
+-->
+
 <div class="tab-content">
     <div id="menu1" class="tab-pane fade in active">
         <div class="media">
+            Video loaded from: <a href="@Model.StorageUrl">@Model.StorageUrl</a>.
+            <br />
             <video width="100%" controls>
                 <source src="@Model.StorageUrl" type="video/mp4">
                 Your browser does not support HTML5 video.
@@ -23,6 +34,8 @@
     </div>
     <div id="menu2" class="tab-pane fade">
         <div class="media">
+            Video loaded from: <a href="@Model.ContentDeliveryNetworkUrl">@Model.ContentDeliveryNetworkUrl</a>.
+            <br />
             <video width="100%" controls>
                 <source src="@Model.ContentDeliveryNetworkUrl" type="video/mp4">
                 Your browser does not support HTML5 video.

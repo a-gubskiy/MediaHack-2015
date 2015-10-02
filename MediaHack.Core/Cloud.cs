@@ -103,7 +103,7 @@ namespace MediaHack.Core
                 Title = blob.Metadata[NameField],
                 Name = blob.Name,
                 StorageUrl = blob.Uri.ToString(),
-                ContentDeliveryNetworkUrl = $"https://{_config.CdnEndpointName}.vo.mscend.net/{ContainerName}/{blob.Name}"
+                ContentDeliveryNetworkUrl = $"https://{_config.CdnEndpointName}.vo.msecnd.net/{ContainerName}/{blob.Name}"
             };
         }
     }
